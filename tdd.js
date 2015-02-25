@@ -8,19 +8,40 @@ var assert = {
 		// body...
 		var myDiv = new RedOrGreen("div");
 
-		if (expectedResult === returnedResult) {
-			myDiv.makeGreen();
-			++passes;
-		}
-		else {
+		if(typeof expectedResult != "object"){
 
-			myDiv.makeRed();
-			++fails;
+			if (expectedResult === returnedResult) {
+				myDiv.makeGreen();
+				++passes;
+			}
+			else {
+
+				myDiv.makeRed();
+				++fails;
+			}
+		}
+		else{
+			var population = returnedResult.length;
+			var matches = 0;
+
+			for (var i = 0; i < population; i++) {
+				if(expectedResult[i] === returnedResult[i]){
+					++matches;
+				}
+			};
+
+			if (matches === population) {
+				myDiv.makeGreen();
+				++passes;
+			} else{
+				myDiv.makeRed();
+				++fails;
+			};
 		}
 
-		var stats = passes+fails;
+			var stats = passes+fails;
 		
-		newP.innerHTML = "Passes: " + passes + " Fails: " + fails + " Total tests: " + stats;
+			newP.innerHTML = "Passes: " + passes + " Fails: " + fails + " Total tests: " + stats;
 	}
 };
 
