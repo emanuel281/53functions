@@ -10,12 +10,16 @@ You should:
 * To see how to do that have a look here: https://help.github.com/articles/syncing-a-fork/
 * regularly update from upstream to check for changes
 * use TDD
-	* Write the first 5 functions your own framework at first - the one you created in the Codex Setup
-	* start looking at [Qunit](http://qunitjs.com/)
+	* Always write the test code first - this will help you to understand what needs doing and get you in the habit of doing TDD. 
+	* Write the first 5 functions using your own framework - the one you created in the Codex Setup project called TestMyCode
+	* Once done get your code and test reviewed by your Tech Mentor (André)
+	* Once the first 5 tests are passing start looking at [Qunit](http://qunitjs.com/)
 		* Rewrite the tests for the first 5 functions using Qunit. 
-	* From now on use Qunit 
-	* Setup a [Travis](https://travis-ci.org) and start monitoring your tests
-* commit to GIT regularly
+	* From now on use Qunit to write all your tests
+	* Setup a [Travis](https://travis-ci.org) and start monitoring your tests:
+		* This will need a gulp setup - speak to your Tech Mentor about this
+		
+**commit to GIT regularly**
 
 # These things count:
 * regular commits
@@ -46,8 +50,8 @@ Create a function that:
  #|File name & function name | Write a function that?
 ---|----------|-------------------------------------------------------------------------------------
 1| hello.js | return "hello world"
-2| hello_uppercase.js| takes a users name as parameter and returns "Hello, <USERNAME>!"
-3| hello_joe.js | takes a users name as parameter and returns as "Hello, <USERNAME>!" if their name is Joe or Bob only say "Hello!"
+2| hello_uppercase.js| takes a username as parameter and returns "Hello, < USERNAME parameter >!"
+3| hello_joe.js | takes a username as parameter and returns as "Hello, < USERNAME parameter >!" if the username is Joe or Bob only say "Hello!"
 4| number_list.js |takes a number as a parameter (n) and return a list of number from 1 to n
 5| sum_numbers.js| takes a number as a parameter (n) and return the sum of numbers from 1 to n
 6| length.js|takes a string parameter and return the length of the supplied parameter
