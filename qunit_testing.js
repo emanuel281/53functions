@@ -22,7 +22,8 @@ QUnit.test("testing number_list() funtion", function(assert){
 	var result = number_list(10);
 
 	for(var i = 0; i < 10; i++){
-		assert.equal(result[i], i+1, "We expect the value to be '"+i+"'");
+		var j=i+1;
+		assert.equal(result[i], i+1, "We expect the value to be '"+j+"'");
 	}
 });
 
