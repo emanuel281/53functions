@@ -3,7 +3,7 @@ function number_list (number) {
 	var number_list = [];
 
 	for (var i = 1; i <= number; i++){
-		number_list[i-1] = i;
+		number_list.push(i);
 	}
 
 	return number_list;

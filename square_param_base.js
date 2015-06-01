@@ -1,11 +1,11 @@
-function square_stars (n) {
+function square_stars (character, n) {
 
 	var result_string = [];
 
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
 			if(i===0 || i===n-1 || j===0 || j===n-1)
-				process.stdout.write('*');
+				process.stdout.write(character);
 			else
 				process.stdout.write(' ');
 
@@ -14,4 +14,4 @@ function square_stars (n) {
 	};
 }
 
-square_stars(40);
+square_stars("z", 4);
