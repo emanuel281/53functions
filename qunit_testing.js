@@ -164,3 +164,19 @@ QUnit.test("testing lowercase_letters() funtion", function(assert){
 	for(var i = 0; i < expect.length; i++)
 		assert.equal(result[i], expect[i], "We expect the value to be '" + expect[i] + "'");
 });
+
+QUnit.test("testing square_stars() funtion", function(assert){
+
+	var expect = ['* ', '* ', '* ', '* ', '\n', '* ', '  ', '  ', '* ', '\n', '* ', '  ', '  ', '* ', '\n', '* ', '* ', '* ', '* ', '\n'];
+	var result = square_stars(4);
+
+	assert.deepEqual(result, expect, "We expect the value to be '" + expect + "'");
+});
+
+QUnit.test("testing square_param_base() funtion", function(assert){
+
+	var expect = ['s ', 's ', 's ', 's ', '\n', 's ', '  ', '  ', 's ', '\n', 's ', '  ', '  ', 's ', '\n', 's ', 's ', 's ', 's ', '\n'];
+	var result = square_param_base('s',4);
+
+	assert.deepEqual(result, expect, "We expect the value to be '" + expect + "'");
+});

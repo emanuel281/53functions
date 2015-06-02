@@ -1,17 +1,21 @@
-function square_stars (character, n) {
+function square_param_base (character, n) {
 
 	var result_string = [];
 
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
 			if(i===0 || i===n-1 || j===0 || j===n-1)
-				process.stdout.write(character);
+				result_string.push(character+" ");
 			else
-				process.stdout.write(' ');
+				result_string.push('  ');
 
 		};
-		process.stdout.write('\n');
+		result_string.push('\n');
 	};
+
+	return result_string;
 }
 
-square_stars("z", 4);
+// var printer = require("./print_array");
+
+// printer.print_array(square_param_base("z", 4));
